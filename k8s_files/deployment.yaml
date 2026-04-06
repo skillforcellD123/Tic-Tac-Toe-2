@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: tic-tac-toe-app
+  name: ludo-app
   labels:
-    app: tic-tac-toe-app
+    app: ludo-app
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: tic-tac-toe-app
+      app: ludo-app
   template:
     metadata:
       labels:
-        app: tic-tac-toe-app
+        app: ludo-app
     spec:
       containers:
-      - name: tic-tac-toe-container
-        image: 560976331199.dkr.ecr.us-east-1.amazonaws.com/tic-tac-toe:latest
+      - name: ludo-container
+        image: 560976331199.dkr.ecr.us-east-1.amazonaws.com/ludo:latest
         ports:
         - containerPort: 5173
 ...
